@@ -10,7 +10,7 @@ def search_binary(n, prefix=None, condition=None):
 
     if len(prefix) == n:
         print(prefix)  # Valid list of 3s and 4s
-        cumulative_sums = list(i % 12 for i in itertools.accumulate([6] + prefix))
+        cumulative_sums = list(i % 12 for i in itertools.accumulate([0] + prefix))
         print(cumulative_sums)  # Cumulative sums
         return
 
@@ -22,7 +22,7 @@ def search_binary(n, prefix=None, condition=None):
 # Define the condition: Abort if the cumulative sums have duplicates
 def condition(prefix):
     # Calculate cumulative sum for the list of integers (prefix)
-    cumulative_sums = list(i % 12 for i in itertools.accumulate([6] + prefix))
+    cumulative_sums = list(i % 12 for i in itertools.accumulate([0] + prefix))
     # Check for duplicates in cumulative sums
     return len(cumulative_sums) == len(set(cumulative_sums))
 
