@@ -1,0 +1,17 @@
+[project]
+name = "chords"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "kureta", email = "skureta@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+chords = "chords:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
